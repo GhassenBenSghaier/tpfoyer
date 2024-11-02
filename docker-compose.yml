@@ -30,16 +30,6 @@ services:
     stdin_open: true
     tty: true
 
-  mysql-exporter:
-    image: prom/mysqld-exporter:latest
-    environment:
-      - DATA_SOURCE_NAME=root:ghassen@tcp(mysqldb:3306)/
-    ports:
-      - 9104:9104
-    depends_on:
-      - mysqldb
 
 volumes:
   db:
-
-
